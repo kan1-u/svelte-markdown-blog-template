@@ -39,14 +39,7 @@ description: A sample post introducing some of the markdown features. 😀
 
 ---
 
----
-
----
-
 ```markdown
----
----
-
 ---
 ```
 
@@ -96,19 +89,15 @@ Unordered
 
 - Foo A
 - Foo B
-  - Bar A
-    - Baz A
-    * Baz B
-    - Baz C
+  - Bar
+    - Baz
 - Foo C
 
 ```markdown
 - Foo A
 - Foo B
-  - Bar A
-    - Baz A
-    * Baz B
-    - Baz C
+  - Bar
+    - Baz
 - Foo C
 ```
 
