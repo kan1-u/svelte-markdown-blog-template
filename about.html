@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/svelte-markdown-blog-template/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.js" data-svelte="svelte-x950b0"></script><script data-svelte="svelte-x950b0">mermaid.initialize({ startOnLoad: true });
+	</script>
+	<link rel="stylesheet" href="/svelte-markdown-blog-template/_app/immutable/assets/pages/__layout.svelte-ce9f6f7b.css">
+	<link rel="modulepreload" href="/svelte-markdown-blog-template/_app/immutable/start-027e04c2.js">
+	<link rel="modulepreload" href="/svelte-markdown-blog-template/_app/immutable/chunks/index-2e7630a1.js">
+	<link rel="modulepreload" href="/svelte-markdown-blog-template/_app/immutable/chunks/paths-396f020f.js">
+	<link rel="modulepreload" href="/svelte-markdown-blog-template/_app/immutable/chunks/preload-helper-b11eebc0.js">
+	<link rel="modulepreload" href="/svelte-markdown-blog-template/_app/immutable/pages/__layout.svelte-25f3e031.js">
+	<link rel="modulepreload" href="/svelte-markdown-blog-template/_app/immutable/pages/about.svelte-3691a049.js">
+	<link rel="modulepreload" href="/svelte-markdown-blog-template/_app/immutable/chunks/Markdown-3a5890f7.js">
+	</head>
+	<body>
+		<div>
+
+
+
+
+<nav class="flex space-x-4 bg-slate-50 py-2 sm:justify-center"><a href="/svelte-markdown-blog-template/" class="rounded-lg px-3 py-2 text-center text-2xl font-medium underline hover:bg-slate-100 md:w-48 md:min-w-fit">Home
+		</a><a href="/svelte-markdown-blog-template/about" class="rounded-lg px-3 py-2 text-center text-2xl font-medium underline hover:bg-slate-100 md:w-48 md:min-w-fit">About
+		</a></nav>
+
+<div class="container mx-auto max-w-screen-lg pt-4"><h1 class="text-3xl font-bold underline">About</h1>
+
+<div class="m-8"><article class="prose prose-slate max-w-none prose-code:text-slate-500 prose-pre:bg-slate-100 md:prose-lg"><!-- HTML_TAG_START --><h1>Svelte Markdown Blog Template</h1>
+<p>A Markdown-based blog template developed in Svelte.</p>
+<h2>Setup</h2>
+<p>Set the <code>base</code> property in <code>svelte.config.js</code> to the repository name.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">kit</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">paths</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token literal-property property">base</span><span class="token operator">:</span> <span class="token string">'/svelte-markdown-blog-template'</span> <span class="token comment">// Change to the your repository name.</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2>Write Post</h2>
+<p>The markdown files in <code>contents</code> are recognized as posts.</p>
+<p>This repository has <code>sample.md</code> at the initially.<br>
+You can delete it to create your own posts.</p>
+<p>Metadata is always required at the beginning of the markdown file.</p>
+<pre><code class="language-markdown">---
+title: Sample Post
+author: Uegaki
+date: 2022-07-03
+description: A sample post introducing some of the features. 😀
+---
+</code></pre>
+<h2>Publish</h2>
+<p>You can easily publish using <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">Github Pages</a>.</p>
+<p>This repository has a Github Workflow for that, just publish the <code>gh-pages</code> branch.</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> github pages
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v3
+
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token number">16</span>
+          <span class="token key atrule">cache</span><span class="token punctuation">:</span> <span class="token string">'npm'</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> npm i
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> npm run build
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> ./build
+</code></pre>
+<h2>Development</h2>
+<p>You can free to develop in any environment you like.</p>
+<pre><code class="language-shell">npm run dev
+</code></pre>
+<ul>
+<li>build</li>
+</ul>
+<pre><code class="language-shell">npm run build
+</code></pre><!-- HTML_TAG_END --></article></div></div>
+
+
+		<script type="module" data-sveltekit-hydrate="1q0x30c">
+		import { start } from "/svelte-markdown-blog-template/_app/immutable/start-027e04c2.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="1q0x30c"]').parentNode,
+			paths: {"base":"/svelte-markdown-blog-template","assets":"/svelte-markdown-blog-template"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 2],
+				params: {},
+				routeId: "about"
+			}
+		});
+	</script></div>
+	</body>
+</html>
