@@ -8,13 +8,11 @@ Set the \`base\` property in \`svelte.config.js\` to the repository name.
 
 \`\`\`javascript
 const config = {
-    ...,
-	kit: {
-    ...,
-		paths: {
-			base: '/svelte-markdown-blog-template' // Change to the your repository name.
-		}
-	}
+    kit: {
+        paths: {
+            base: '/svelte-markdown-blog-template' // Change to the your repository name.
+        }
+    }
 };
 \`\`\`
 
