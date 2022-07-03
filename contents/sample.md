@@ -47,20 +47,12 @@ description: A sample post introducing some of the markdown features. 😀
 
 **bold**
 
-**bold**
-
-_italic_
-
 _italic_
 
 ~~strikethrough~~
 
 ```markdown
 **bold**
-
-**bold**
-
-_italic_
 
 _italic_
 
